@@ -8,35 +8,30 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WebRTC'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of WebRTC.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
+  s.version          = '1.1.2940'
+  s.summary          = 'WebRTC framework for DiyalogEngine.'
   s.homepage         = 'https://github.com/tcak76/WebRTC'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'tcak76' => 'tcak76@users.noreply.github.com' }
+  s.author           = { 'Diyalog' => 'tcak76@users.noreply.github.com' }
   s.source           = { :git => 'https://github.com/tcak76/WebRTC.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'WebRTC/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'WebRTC' => ['WebRTC/Assets/*.png']
-  # }
+  s.public_header_files = "WebRTC/WebRTC.framework/Headers/*.h"
+  s.source_files     = "WebRTC/WebRTC/Headers/*.h"
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  
+  s.prepare_command = <<-CMD
+      echo 'fetching WebRTC.framework'
+      curl -OL 'https://diyalog.im/app/pkgs/ios_frameworks/WebRTC/1.1.2940/WebRTC.zip'
+      rm -fr 'WebRTC.framework'
+      echo 'unzipping WebRTC.framework'
+      unzip -o -q WebRTC.zip
+      echo 'cleaning files'
+      rm WebRTC.zip
+    CMD
+
+  s.vendored_frameworks = 'WebRTC.framework'
+
+  
 end
