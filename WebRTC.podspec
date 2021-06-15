@@ -33,5 +33,8 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = 'WebRTC.framework'
 
+  s.xcconfig = {
+     "HEADER_SEARCH_PATHS" => "$(PROJECT_DIR)/Pods/WebRTC/**"
+  }
   
 end
