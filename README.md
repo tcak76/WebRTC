@@ -5,25 +5,14 @@
 [![License](https://img.shields.io/cocoapods/l/WebRTC.svg?style=flat)](https://cocoapods.org/pods/WebRTC)
 [![Platform](https://img.shields.io/cocoapods/p/WebRTC.svg?style=flat)](https://cocoapods.org/pods/WebRTC)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
 ## Installation
 
-WebRTC is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+To install WebRTC, simply add the following line to your Podfile by updating \<version no> to the desired version.
 
 ```ruby
-pod 'WebRTC'
+pod 'WebRTC', :git => 'https://github.com/diyalog-im/WebRTC.git', :tag => '<version no'
 ```
-
-## Author
-
-tcak76, tcak76@users.noreply.github.com
 
 ## License
 
-WebRTC is available under the MIT license. See the LICENSE file for more info.
+WebRTC is available under the [license](http://www.webrtc.org/license-rights/license). See the LICENSE file for more info.

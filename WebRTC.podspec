@@ -10,10 +10,10 @@ Pod::Spec.new do |s|
   s.name             = 'WebRTC'
   s.version          = '1.1.2940'
   s.summary          = 'WebRTC framework for DiyalogEngine.'
-  s.homepage         = 'https://github.com/tcak76/WebRTC'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Diyalog' => 'tcak76@users.noreply.github.com' }
-  s.source           = { :git => 'https://github.com/tcak76/WebRTC.git', :tag => s.version.to_s }
+  s.homepage         = 'https://github.com/diyalog-im/WebRTC'
+  s.license          = { :type => 'http://www.webrtc.org/license-rights/license', :file => 'LICENSE' }
+  s.author           = { 'Diyalog' => 'diyalog-im@users.noreply.github.com' }
+  s.source           = { :git => 'https://github.com/diyalog-im/WebRTC.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
 
